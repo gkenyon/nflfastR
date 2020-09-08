@@ -4,6 +4,7 @@
 # Session Data files
 .RData
 # User-specific files
+data-raw/*
 .Ruserdata
 # Example code in package build process
 *-Ex.R
@@ -29,3 +30,4 @@ vignettes/*.pdf
 .DS_Store
 docs
 inst/doc
+
