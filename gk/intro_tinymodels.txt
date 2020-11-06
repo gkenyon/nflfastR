@@ -1,0 +1,47 @@
+https://cmsac-tidymodels.netlify.app/#81
+
+Focus for Today
+90 Minutes (with breaks)
+
+Binary classification:
+
+Logistic Regression
+Random Forest
+Slides at: cmsac-tidymodels.netlify.app/
+Source code at: github.com/jthomasmock/nfl-workshop
+
+To follow along, you can read in the subsetted data with the code below:
+
+Core ideas for Today
+A workflow for tidy machine learning
+
+Split the data
+Pre-Process and Choose a Model
+Combine into a Workflow
+Generate Predictions and Assess Model Metrics
+
+https://bradleyboehmke.github.io/HOML/process.html#classification-models
+
+ROC Curve example
+False Positive Rate == (1 - Specificity) on X
+True Positive Rate (Sensitivity) on Y
+AUC = Area Under the Curve (higher = better)
+
+1) Split the data
+
+split_data <- initial_split(data, 0.75)
+train_data <- training(split_data)
+test_data <- testing(split_data)
+
+Good data hygeine is obviously important.
+
+rsample
+Now that I've created the dataset to use, I'll start with tidymodels proper.
+
+rsample at a mininum does your train/test split, but also takes care of things like boostrapping, stratification, v-fold cross validation, validation splits, rolling origin, etc.
+
+Data Splitting w/ rsample
+Do the initial split and stratify by play type to make sure there are equal ratios of run vs pass in test and train
+
+
+tidyverse, do reshaping and basic cleaning.
